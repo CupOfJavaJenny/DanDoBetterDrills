@@ -8,6 +8,7 @@ public class StringUtilities {
      * @return `Hello World` as a string
      */
     public static String getHelloWorld() {
+
         return "Hello World";
     }
 
@@ -70,14 +71,19 @@ public class StringUtilities {
 
 
     }
+    /* we will seperate the array of words using .split(""). Then we will go through the str holding
+     all spaced words and find index #0 which is the 1st word*/
 
     /**
      * @param spaceDelimitedString a string, representative of a sentence, containing spaces
      * @return the first sequence of characters
      */
     public static String getFirstWord(String spaceDelimitedString){
-        
-        return null;
+        String[] str = spaceDelimitedString.split(" ");
+        String firstWord = str[0];
+        return firstWord;
+
+
     }
 
     /**
@@ -85,8 +91,9 @@ public class StringUtilities {
      * @return the second word of a string delimited by spaces.
      */
     public static String getSecondWord(String spaceDelimitedString){
-
-        return null;
+        String[] str = spaceDelimitedString.split(" ");
+        String secondWord = str[1];
+        return secondWord;
     }
 
     /**
@@ -94,6 +101,17 @@ public class StringUtilities {
      * @return an identical string with characters in reverse order.
      */
     public static String reverse(String stringToReverse){
-        return null;
+        String wordInReverse = "";
+        for(int i = stringToReverse.length()-1; i>=0; i--){
+            //length counts incorrectly/exact # of items not index ,
+            // we need to decrement/-1, reverse condition, and reverse increment.
+            wordInReverse += stringToReverse.charAt(i);
+            //concatenation between all characters
+            //+= in this case means take wordInreverse & concatenates it to valueToBeRevered(shorthand)
+            //long hand: wordInReverse = wordInReverse + valueToBeReversed.charAt(i);
+        }
+        return wordInReverse;
     }
+
+
 }
