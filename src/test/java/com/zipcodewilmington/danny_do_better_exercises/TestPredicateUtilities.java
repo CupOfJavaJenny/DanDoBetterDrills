@@ -1,6 +1,7 @@
 package com.zipcodewilmington.danny_do_better_exercises;
 
 import org.junit.Test;
+import com.zipcodewilmington.danny_do_better_exercises.PredicateUtilities;
 
 import static org.junit.Assert.*;
 
