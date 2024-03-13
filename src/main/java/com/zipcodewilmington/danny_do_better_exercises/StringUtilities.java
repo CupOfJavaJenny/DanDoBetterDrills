@@ -18,7 +18,7 @@ public class StringUtilities {
      */
     public static String concatenation(String firstSegment, String secondSegment){
 
-        return "firstSegment" + "secondSegment";
+        return firstSegment + secondSegment;
     }
 
     /**
@@ -36,7 +36,8 @@ public class StringUtilities {
      * @return the first 3 characters of `input`
      */
     public static String getPrefix(String input){
-        return null;
+
+        return input.substring(0,3);
     }
 
     /**
@@ -44,7 +45,8 @@ public class StringUtilities {
      * @return the last 3 characters of `input`
      */
     public static String getSuffix(String input){
-        return null;
+
+        return input.substring(input.length()-3);
     }
 
     /**
@@ -53,7 +55,9 @@ public class StringUtilities {
      * @return the equivalence of two strings, `inputValue` and `comparableValue`
      */
     public static Boolean compareTwoStrings(String inputValue, String comparableValue){
-        return null;
+      // . equals is a comparison method between string to another string
+      //put in parenthesis what value you want to compare
+        return inputValue.equals(comparableValue);
     }
 
     /**
@@ -61,7 +65,11 @@ public class StringUtilities {
      * @return the middle character of `inputValue`
      */
     public static Character getMiddleCharacter(String inputValue){
-        return null;
+       int len = inputValue.length();
+       int middle = len / 2;
+       return inputValue.charAt((middle));
+
+
     }
 
     /**
